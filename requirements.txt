@@ -1,0 +1,8 @@
+# Python 3.12 권장. 모델 코드 실행에 사용한 패키지 버전입니다.
+# mat73, IPython, Jupyter는 standalone Python 실행에 필요하지 않습니다.
+numpy==2.5.3
+pandas==3.0.6
+matplotlib==3.11.2
+h5py==3.16.0
+scipy==1.18.1
+scikit-learn==1.9.1
