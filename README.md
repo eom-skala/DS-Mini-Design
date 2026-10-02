@@ -285,7 +285,7 @@ cp .env.example .env
 
 ## 참고문헌
 - Severson et al. (2019). Data-driven prediction of battery cycle life before capacity degradation. *Nature Energy*, 4, 383–391.
-- https://www.kaggle.com/datasets/itshpark/data-driven-prediction-of-battery-cycle
+- 데이터셋: https://www.kaggle.com/datasets/itshpark/data-driven-prediction-of-battery-cycle
 
 
 ## 팀 구성
