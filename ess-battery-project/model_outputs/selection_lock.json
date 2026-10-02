@@ -55,7 +55,7 @@
     "Batch 1:cell_34",
     "Batch 1:cell_35"
   ],
-  "cv_mean_mape": 7.893541232491123,
+  "cv_mean_mape": 7.149849152172513,
   "best_params": {
     "model__alpha": 0.1
   },

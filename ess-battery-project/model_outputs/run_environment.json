@@ -1,0 +1,18 @@
+{
+  "python": "3.11.15 (main, Mar  3 2026, 00:52:57) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "packages": {
+    "numpy": "2.2.6",
+    "pandas": "2.2.3",
+    "matplotlib": "3.10.3",
+    "h5py": "3.13.0",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.6.1"
+  },
+  "batch1_file": "/Users/eom-jinyong/Downloads/데이터분석_MiniProject/Data/2017-05-12_batchdata_updated_struct_errorcorrect.mat",
+  "batch2_file": "/Users/eom-jinyong/Downloads/데이터분석_MiniProject/Data/2018-02-20_batchdata_updated_struct_errorcorrect.mat",
+  "features": [
+    "dq_min",
+    "log_dq_var"
+  ],
+  "random_state": 42
+}
