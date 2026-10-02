@@ -43,7 +43,7 @@
 
 
 ## 환경 설정 (sample) 
-Python 3.12를 권장한다. `requirements.txt`는 모델 검증에 사용한 패키지 버전을 고정한다.
+Python 3.11 또는 3.12를 사용한다. `requirements.txt`는 두 버전에서 설치할 수 있는 패키지 버전을 고정한다. 기존 성능표는 이전 검증 환경의 결과이므로 패키지 버전 변경 시 실행 결과에 차이가 날 수 있다.
 
 프로젝트 루트의 `.env` 파일에서 데이터 폴더 경로를 지정한다. Python 파일이나 터미널 인자에서 데이터 경로를 수정할 필요가 없다.
 
@@ -60,12 +60,13 @@ DATA_DIR="../Data"
 ```bash
 git clone https://github.com/eom-skala/DS-Mini_Design DS-Mini-Design
 cd DS-Mini-Design
-python3 -m venv .venv
+python3.11 -m venv .venv
 source .venv/bin/activate
-python -m pip install -r requirements.txt
+./.venv/bin/python -m pip install --upgrade pip
+./.venv/bin/python -m pip install -r requirements.txt
 cp .env.example .env
 # .env의 DATA_DIR을 실제 데이터 폴더 경로로 수정
-python ess-battery-project/run_project.py
+./.venv/bin/python ess-battery-project/run_project.py
 ```
 
 
@@ -79,13 +80,13 @@ python ess-battery-project/run_project.py
 
 ```bash
 # 모델 평가만 실행하고 Batch 1 EDA 출력은 생략
-python ess-battery-project/run_project.py --skip-eda
+./.venv/bin/python ess-battery-project/run_project.py --skip-eda
 
 # Batch 2를 열지 않고 Batch 1 실행만 확인
-python ess-battery-project/run_project.py --train-only
+./.venv/bin/python ess-battery-project/run_project.py --train-only
 
 # 별도 결과 폴더로 출력
-python ess-battery-project/run_project.py --output-dir "./results/run1"
+./.venv/bin/python ess-battery-project/run_project.py --output-dir "./results/run1"
 ```
 
 

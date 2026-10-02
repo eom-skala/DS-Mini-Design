@@ -1,9 +1,10 @@
-# Python 3.12 권장. 모델 코드 실행에 사용한 패키지 버전입니다.
+# Python 3.11/3.12 호환 패키지 버전입니다.
+# 기존 성능표는 이전 검증 환경의 결과이며 버전 변경 시 차이가 날 수 있습니다.
 # mat73, IPython, Jupyter는 standalone Python 실행에 필요하지 않습니다.
-numpy==2.5.3
-pandas==3.0.6
-matplotlib==3.11.2
-h5py==3.16.0
-scipy==1.18.1
-scikit-learn==1.9.1
-python-dotenv==1.2.4
+numpy==2.2.6
+pandas==2.2.3
+matplotlib==3.10.3
+h5py==3.13.0
+scipy==1.15.3
+scikit-learn==1.6.1
+python-dotenv==1.1.0
