@@ -102,11 +102,48 @@ cp .env.example .env
 <details>
 <summary>수명 분포·비율·이상치 이미지</summary>
 
-| 그림           | Batch 1                                                        | Batch 2                                                        | Batch 3                                                        |
-| -------------- | -------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------- |
-| Histogram      | ![Batch 1 Histogram](images/Batch1_Histogram.png)              | ![Batch 2 Histogram](images/Batch2_Histogram.png)              | ![Batch 3 Histogram](images/Batch3_Histogram.png)              |
-| 장·단수명 비율 | ![Batch 1 장·단수명 비율](images/Batch1_BatteryProportion.png) | ![Batch 2 장·단수명 비율](images/Batch2_BatteryProportion.png) | ![Batch 3 장·단수명 비율](images/Batch3_BatteryProportion.png) |
-| Box Plot       | ![Batch 1 Box Plot](images/Batch1_BoxPlot.png)                 | ![Batch 2 Box Plot](images/Batch2_BoxPlot.png)                 | ![Batch 3 Box Plot](images/Batch3_BoxPlot.png)                 |
+#### Batch 1
+
+**Histogram**
+
+<img src="images/Batch1_Histogram.png" alt="Batch 1 Histogram" width="100%">
+
+**장·단수명 비율**
+
+<img src="images/Batch1_BatteryProportion.png" alt="Batch 1 장·단수명 비율" width="100%">
+
+**Box Plot**
+
+<img src="images/Batch1_BoxPlot.png" alt="Batch 1 Box Plot" width="100%">
+
+#### Batch 2
+
+**Histogram**
+
+<img src="images/Batch2_Histogram.png" alt="Batch 2 Histogram" width="100%">
+
+**장·단수명 비율**
+
+<img src="images/Batch2_BatteryProportion.png" alt="Batch 2 장·단수명 비율" width="100%">
+
+**Box Plot**
+
+<img src="images/Batch2_BoxPlot.png" alt="Batch 2 Box Plot" width="100%">
+
+#### Batch 3
+
+**Histogram**
+
+<img src="images/Batch3_Histogram.png" alt="Batch 3 Histogram" width="100%">
+
+**장·단수명 비율**
+
+<img src="images/Batch3_BatteryProportion.png" alt="Batch 3 장·단수명 비율" width="100%">
+
+**Box Plot**
+
+<img src="images/Batch3_BoxPlot.png" alt="Batch 3 Box Plot" width="100%">
+
 
 </details>
 
@@ -119,9 +156,24 @@ cp .env.example .env
 <details>
 <summary>사이클별 방전 용량 곡선</summary>
 
-| 그림    | Batch 1                                       | Batch 2                                       | Batch 3                                       |
-| ------- | --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| Qd 곡선 | ![Batch 1 Qd 곡선](images/Batch1_QdCurve.png) | ![Batch 2 Qd 곡선](images/Batch2_QdCurve.png) | ![Batch 3 Qd 곡선](images/Batch3_QdCurve.png) |
+#### Batch 1
+
+**Qd 곡선**
+
+<img src="images/Batch1_QdCurve.png" alt="Batch 1 Qd 곡선" width="100%">
+
+#### Batch 2
+
+**Qd 곡선**
+
+<img src="images/Batch2_QdCurve.png" alt="Batch 2 Qd 곡선" width="100%">
+
+#### Batch 3
+
+**Qd 곡선**
+
+<img src="images/Batch3_QdCurve.png" alt="Batch 3 Qd 곡선" width="100%">
+
 
 </details>
 
@@ -134,10 +186,36 @@ cp .env.example .env
 <details>
 <summary>ΔQ 곡선과 셀별 통계</summary>
 
-| 그림            | Batch 1                                                   | Batch 2                                                   | Batch 3                                                   |
-| --------------- | --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- |
-| ΔQ(V) 개별 곡선 | ![Batch 1 ΔQ(V) 개별 곡선](images/Batch1_IndQdCurves.png) | ![Batch 2 ΔQ(V) 개별 곡선](images/Batch2_IndQdCurves.png) | ![Batch 3 ΔQ(V) 개별 곡선](images/Batch3_IndQdCurves.png) |
-| ΔQ 셀별 통계    | ![Batch 1 ΔQ 셀별 통계](images/Batch1_QdStatistics.png)   | ![Batch 2 ΔQ 셀별 통계](images/Batch2_QdStatistics.png)   | ![Batch 3 ΔQ 셀별 통계](images/Batch3_QdStatistics.png)   |
+#### Batch 1
+
+**ΔQ(V) 개별 곡선**
+
+<img src="images/Batch1_IndQdCurves.png" alt="Batch 1 ΔQ(V) 개별 곡선" width="100%">
+
+**ΔQ 셀별 통계**
+
+<img src="images/Batch1_QdStatistics.png" alt="Batch 1 ΔQ 셀별 통계" width="100%">
+
+#### Batch 2
+
+**ΔQ(V) 개별 곡선**
+
+<img src="images/Batch2_IndQdCurves.png" alt="Batch 2 ΔQ(V) 개별 곡선" width="100%">
+
+**ΔQ 셀별 통계**
+
+<img src="images/Batch2_QdStatistics.png" alt="Batch 2 ΔQ 셀별 통계" width="100%">
+
+#### Batch 3
+
+**ΔQ(V) 개별 곡선**
+
+<img src="images/Batch3_IndQdCurves.png" alt="Batch 3 ΔQ(V) 개별 곡선" width="100%">
+
+**ΔQ 셀별 통계**
+
+<img src="images/Batch3_QdStatistics.png" alt="Batch 3 ΔQ 셀별 통계" width="100%">
+
 
 </details>
 
@@ -150,11 +228,48 @@ cp .env.example .env
 <details>
 <summary>충전 프로토콜과 전류 패턴 분석</summary>
 
-| 그림                        | Batch 1                                                                           | Batch 2                                                                           | Batch 3                                                                           |
-| --------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| 프로토콜별 평균 수명 표     | ![Batch 1 프로토콜별 평균 수명 표](images/Batch1_ChargeProtocol.png)              | ![Batch 2 프로토콜별 평균 수명 표](images/Batch2_ChargeProtocol.png)              | ![Batch 3 프로토콜별 평균 수명 표](images/Batch3_ChargeProtocol.png)              |
-| 프로토콜별 평균 수명 그래프 | ![Batch 1 프로토콜별 평균 수명 그래프](images/Batch1_MeanCycleLife.png)           | ![Batch 2 프로토콜별 평균 수명 그래프](images/Batch2_MeanCycleLife.png)           | ![Batch 3 프로토콜별 평균 수명 그래프](images/Batch3_MeanCycleLife.png)           |
-| 전류 패턴과 전체 열화 속도  | ![Batch 1 전류 패턴과 전체 열화 속도](images/Batch1_ChargePatternCorrelation.png) | ![Batch 2 전류 패턴과 전체 열화 속도](images/Batch2_ChargePatternCorrelation.png) | ![Batch 3 전류 패턴과 전체 열화 속도](images/Batch3_ChargePatternCorrelation.png) |
+#### Batch 1
+
+**프로토콜별 평균 수명 표**
+
+<img src="images/Batch1_ChargeProtocol.png" alt="Batch 1 프로토콜별 평균 수명 표" width="100%">
+
+**프로토콜별 평균 수명 그래프**
+
+<img src="images/Batch1_MeanCycleLife.png" alt="Batch 1 프로토콜별 평균 수명 그래프" width="100%">
+
+**전류 패턴과 전체 열화 속도**
+
+<img src="images/Batch1_ChargePatternCorrelation.png" alt="Batch 1 전류 패턴과 전체 열화 속도" width="100%">
+
+#### Batch 2
+
+**프로토콜별 평균 수명 표**
+
+<img src="images/Batch2_ChargeProtocol.png" alt="Batch 2 프로토콜별 평균 수명 표" width="100%">
+
+**프로토콜별 평균 수명 그래프**
+
+<img src="images/Batch2_MeanCycleLife.png" alt="Batch 2 프로토콜별 평균 수명 그래프" width="100%">
+
+**전류 패턴과 전체 열화 속도**
+
+<img src="images/Batch2_ChargePatternCorrelation.png" alt="Batch 2 전류 패턴과 전체 열화 속도" width="100%">
+
+#### Batch 3
+
+**프로토콜별 평균 수명 표**
+
+<img src="images/Batch3_ChargeProtocol.png" alt="Batch 3 프로토콜별 평균 수명 표" width="100%">
+
+**프로토콜별 평균 수명 그래프**
+
+<img src="images/Batch3_MeanCycleLife.png" alt="Batch 3 프로토콜별 평균 수명 그래프" width="100%">
+
+**전류 패턴과 전체 열화 속도**
+
+<img src="images/Batch3_ChargePatternCorrelation.png" alt="Batch 3 전류 패턴과 전체 열화 속도" width="100%">
+
 
 </details>
 
@@ -168,9 +283,24 @@ cp .env.example .env
 <details>
 <summary>초기 100사이클 상관관계 Heatmap</summary>
 
-| 그림     | Batch 1                                                   | Batch 2                                                   | Batch 3                                                   |
-| -------- | --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- |
-| 상관관계 | ![Batch 1 상관관계](images/Batch1_CorrelationHeatmap.png) | ![Batch 2 상관관계](images/Batch2_CorrelationHeatmap.png) | ![Batch 3 상관관계](images/Batch3_CorrelationHeatmap.png) |
+#### Batch 1
+
+**상관관계**
+
+<img src="images/Batch1_CorrelationHeatmap.png" alt="Batch 1 상관관계" width="100%">
+
+#### Batch 2
+
+**상관관계**
+
+<img src="images/Batch2_CorrelationHeatmap.png" alt="Batch 2 상관관계" width="100%">
+
+#### Batch 3
+
+**상관관계**
+
+<img src="images/Batch3_CorrelationHeatmap.png" alt="Batch 3 상관관계" width="100%">
+
 
 </details>
 
