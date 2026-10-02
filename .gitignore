@@ -216,3 +216,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local battery datasets and macOS metadata
+/Data/
+*.mat
+.DS_Store
