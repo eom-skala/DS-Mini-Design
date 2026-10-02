@@ -6,7 +6,7 @@
 - 데이터셋 : MIT-Stanford Battery Dataset (Severson et al., Nature Energy 2019)
 - 학습 데이터 : Batch 1 (2017-05-12)
 - 평가 데이터 : Batch 2 (2018-02-20)
-- 태스크 : Regression (Cycle Life 예측) / Classification (장단수명 분류)  ← 택1 
+- 태스크 : Regression (Cycle Life 예측)
 
 
 ## 파일 구조 (sample) 
@@ -66,7 +66,7 @@ EDA 결과를 바탕으로 선택한 피처와 그 근거를 기술
 
 
 ### 모델 선택 및 근거
-- 후보 모델 : 
+- 후보 모델 : Dummy Regressor, Ridge Regression, Elastic Net, RBF-SVR, RandomForest Regressor, Gradient Boosting Regressor
 - 최종 모델 :
 - 선택 이유 :
 
