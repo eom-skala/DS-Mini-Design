@@ -1,0 +1,7 @@
+Index,Value,Unit
+Train (Batch 1 CV),7.893541232491123,MAPE (%)
+Valid (Batch 1 Hold-out),12.556736809794995,MAPE (%)
+Test (Batch 2),25.46806616587177,MAPE (%)
+Gap (Train-Valid),-4.663195577303871,percentage points
+Gap (Valid-Test),-12.911329356076777,percentage points
+Gap (Target-Test),-16.368066165871774,percentage points
