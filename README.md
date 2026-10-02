@@ -30,7 +30,7 @@
 
 ## 환경 설정 (sample) 
 ```bash
-git clone https://github.com/팀명/ess-battery-project
+git clone https://github.com/eom-skala/DS-Mini_Design
 cd ess-battery-project
 pip install -r requirements.txt
 ```
