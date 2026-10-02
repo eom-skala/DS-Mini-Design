@@ -35,6 +35,8 @@
 │       ├── batch2_final_test.png
 │       ├── run_environment.json     # Python 실행 시 생성
 │       └── eda/                    # Python 실행 시 생성되는 Batch 1 EDA 표·그래프
+├── .env                            # 로컬 데이터 경로 설정 (Git 제외)
+├── .env.example                    # 공유용 설정 예시
 ├── requirements.txt
 └── README.md
 ```
@@ -43,16 +45,30 @@
 ## 환경 설정 (sample) 
 Python 3.12를 권장한다. `requirements.txt`는 모델 검증에 사용한 패키지 버전을 고정한다.
 
+프로젝트 루트의 `.env` 파일에서 데이터 폴더 경로를 지정한다. Python 파일이나 터미널 인자에서 데이터 경로를 수정할 필요가 없다.
+
+```dotenv
+# .env: 상대 경로는 프로젝트 루트 기준
+DATA_DIR="../Data"
+```
+
+- 현재 `.env`는 프로젝트와 나란히 있는 `Data` 폴더를 가리킨다. 다른 환경에서는 `DATA_DIR`을 실제 폴더 경로로 수정한다.
+- 절대 경로도 사용할 수 있다. 공백이 포함된 경로는 위처럼 따옴표로 감싼다.
+- 새로 복제한 저장소에는 `.env.example`을 `.env`로 복사한 뒤 경로를 설정한다. `.env`는 기존 `.gitignore`에 따라 Git에서 제외된다.
+- 실행 위치와 관계없이 Python 파일이 프로젝트 루트의 `.env`를 읽는다. 원본 데이터는 저장소에 포함하지 않는다.
+
 ```bash
 git clone https://github.com/eom-skala/DS-Mini_Design DS-Mini-Design
 cd DS-Mini-Design
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
-python ess-battery-project/run_project.py --data-dir "/path/to/Data"
+cp .env.example .env
+# .env의 DATA_DIR을 실제 데이터 폴더 경로로 수정
+python ess-battery-project/run_project.py
 ```
 
-- `/path/to/Data`를 실제 원본 `.mat` 파일 폴더로 바꾼다. 원본 데이터는 저장소에 포함하지 않는다.
+
 - Batch 1 파일: `2017-05-12_batchdata_updated_struct_errorcorrect.mat`
 - Batch 2 파일: `2018-02-20_batchdata_updated_struct_errorcorrect.mat`
 - 기본 결과 경로는 `ess-battery-project/model_outputs/`이다. 다른 경로는 `--output-dir`로 지정한다.
@@ -63,13 +79,13 @@ python ess-battery-project/run_project.py --data-dir "/path/to/Data"
 
 ```bash
 # 모델 평가만 실행하고 Batch 1 EDA 출력은 생략
-python ess-battery-project/run_project.py --data-dir "/path/to/Data" --skip-eda
+python ess-battery-project/run_project.py --skip-eda
 
 # Batch 2를 열지 않고 Batch 1 실행만 확인
-python ess-battery-project/run_project.py --data-dir "/path/to/Data" --train-only
+python ess-battery-project/run_project.py --train-only
 
 # 별도 결과 폴더로 출력
-python ess-battery-project/run_project.py --data-dir "/path/to/Data" --output-dir "./results/run1"
+python ess-battery-project/run_project.py --output-dir "./results/run1"
 ```
 
 

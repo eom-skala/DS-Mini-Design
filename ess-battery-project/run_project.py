@@ -10,6 +10,7 @@ import argparse
 import sys
 import importlib.metadata
 from pathlib import Path
+from dotenv import dotenv_values
 import json
 import hashlib
 import random
@@ -30,6 +31,26 @@ from sklearn.dummy import DummyRegressor
 from sklearn.linear_model import Ridge, ElasticNet
 from sklearn.svm import SVR
 from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
+
+
+# 실행 위치에 상관없이 프로젝트 루트의 .env를 읽습니다.
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+ENV_FILE = PROJECT_ROOT / '.env'
+
+
+def configured_data_dir():
+    if not ENV_FILE.is_file():
+        raise FileNotFoundError(
+            f'.env 파일이 없습니다: {ENV_FILE}. .env.example을 복사해 DATA_DIR을 지정하세요.')
+    config = dotenv_values(ENV_FILE, encoding='utf-8')
+    value = config.get('DATA_DIR')
+    if value is None or not value.strip():
+        raise ValueError('.env 파일의 DATA_DIR에 원본 .mat 파일 폴더를 지정하세요.')
+    path = Path(value.strip()).expanduser()
+    # 상대 경로는 터미널의 현재 위치가 아닌 프로젝트 루트 기준입니다.
+    if not path.is_absolute():
+        path = PROJECT_ROOT / path
+    return path.resolve()
 
 
 RANDOM_STATE = 42
@@ -300,14 +321,14 @@ def main(args):
     RANDOM_STATE = 42
     random.seed(RANDOM_STATE)
     np.random.seed(RANDOM_STATE)
-    MODEL_DATA_DIR = args.data_dir.expanduser().resolve()
+    MODEL_DATA_DIR = configured_data_dir()
     BATCH1_FILE = MODEL_DATA_DIR / '2017-05-12_batchdata_updated_struct_errorcorrect.mat'
     BATCH2_FILE = MODEL_DATA_DIR / '2018-02-20_batchdata_updated_struct_errorcorrect.mat'
     MODEL_OUTPUT_DIR = args.output_dir.expanduser().resolve()
     if not BATCH1_FILE.is_file():
-        raise FileNotFoundError(f'Batch 1 파일이 없습니다: {BATCH1_FILE}. --data-dir을 확인하세요.')
+        raise FileNotFoundError(f'Batch 1 파일이 없습니다: {BATCH1_FILE}. .env의 DATA_DIR을 확인하세요.')
     if not args.train_only and not BATCH2_FILE.is_file():
-        raise FileNotFoundError(f'Batch 2 파일이 없습니다: {BATCH2_FILE}. --data-dir을 확인하세요.')
+        raise FileNotFoundError(f'Batch 2 파일이 없습니다: {BATCH2_FILE}. .env의 DATA_DIR을 확인하세요.')
     MODEL_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 
@@ -510,9 +531,6 @@ def main(args):
 
 def parse_args():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--data-dir', type=Path,
-                        default=Path(__file__).resolve().parents[2] / 'Data',
-                        help='원본 .mat 파일 폴더 (명시적으로 지정하는 것을 권장)')
     parser.add_argument('--output-dir', type=Path,
                         default=Path(__file__).resolve().parent / 'model_outputs',
                         help='CSV/그래프 출력 폴더')
